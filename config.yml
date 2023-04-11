@@ -1,0 +1,23 @@
+collections:
+  - name: 'index'
+    label: 'Index'
+    files:
+      - name: 'index'
+        label: 'Index'
+        file: 'index.html'
+        fields:
+          - {label: 'Title', name: 'title', widget: 'string'}
+          - {label: 'Content', name: 'content', widget: 'markdown'}
+          - {label: 'Button Text', name: 'buttonText', widget: 'string'}
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'blog'
+    create: true
+    fields:
+      - {label: 'Title', name: 'title', widget: 'string'}
+      - {label: 'Posts', name: 'posts', widget: 'list', fields: [
+          {label: 'Title', name: 'title', widget: 'string'},
+          {label: 'Author', name: 'author', widget: 'string'},
+          {label: 'Date', name: 'date', widget: 'date'},
+          {label: 'Content', name: 'content', widget: 'markdown'},
+        ]}
